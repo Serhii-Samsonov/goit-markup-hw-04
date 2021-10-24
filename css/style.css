@@ -99,6 +99,7 @@ body {
 .header-conntacts {
   padding: 0;
   bottom: none;
+  align-items: center;
 }
 
 .nav-item:not(:last-child) {
@@ -141,15 +142,15 @@ body {
   color: var(--accent-color);
 }
 
-.contact-icon::before {
+.contact-icon {
   margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contact-icon::before {
   fill: currentColor;
 }
 
-.contact-item:focus,
-.contact-item:hover {
-  color: var(--accent-color);
-}
 .header-contact {
   font-weight: 500;
   font-size: 14px;
@@ -169,9 +170,9 @@ body {
     ),
     url(../images/background-img.jpg);
   background-repeat: no-repeat;
-  background-color: #c4c4c4;
   background-size: cover;
   background-position: center;
+  background-color: #c4c4c4;
   height: 600px;
   align-items: center;
   padding-top: 200px;
@@ -542,9 +543,9 @@ body {
   fill: currentColor;
 }
 
-.footer-icon-list-item .link:hover,
-.footer-icon-list-item .link:focus {
-  background-color: var(--accent-color);
+.footer-list-icon-item .link:hover,
+.footer-list-icon-item .link:focus {
+  background: var(--accent-color);
 }
 
 .footer-icon {
@@ -641,6 +642,11 @@ body {
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.gallery-link:hover,
+.gallery-link:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .gallery-card {
