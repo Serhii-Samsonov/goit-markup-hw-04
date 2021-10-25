@@ -98,7 +98,6 @@ body {
 
 .header-conntacts {
   padding: 0;
-  bottom: none;
   align-items: center;
 }
 
@@ -143,15 +142,29 @@ body {
 }
 
 .contact-icon {
+  content: "";
   margin-right: 10px;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .contact-icon::before {
   fill: currentColor;
 }
 
+.contact-icon {
+  fill: var(--primary-text-color);
+}
+
+.contact-icon:focus,
+.contact-icon:hover {
+  fill: var(--accent-color);
+}
+
 .header-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -162,7 +175,8 @@ body {
 /* -------------hero-------------- */
 
 .hero {
-  min-width: 1600px;
+  max-width: 1600px;
+  margin: 0 auto;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -526,7 +540,7 @@ body {
 
 .footer-list-icon-item .link {
   display: flex;
-  width: calc((100%-30px) / 4);
+  width: calc((100%-30px) / 9);
   padding: 12px;
   width: 44px;
   height: 44px;
@@ -643,7 +657,7 @@ body {
   margin-bottom: 30px;
 }
 
-.gallery-link:hover {
+.gallery-item {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -653,4 +667,5 @@ body {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
+
 /* -------------footer-------------- */
