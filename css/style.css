@@ -142,10 +142,7 @@ body {
 }
 
 .contact-icon {
-  content: "";
   margin-right: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .contact-icon::before {
@@ -153,7 +150,7 @@ body {
 }
 
 .contact-icon {
-  fill: var(--primary-text-color);
+  fill: currentColor;
 }
 
 .contact-icon:focus,
@@ -647,14 +644,14 @@ body {
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .gallery-item {
   flex-basis: calc(100% / 3 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .gallery-card {
@@ -662,7 +659,10 @@ body {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.gallery-link {
+  display: block;
 }
 
 .gallery-link:hover,
